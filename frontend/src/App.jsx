@@ -18,8 +18,9 @@ import ActivityLog from "./components/ActivityLog";
 import ErrorAlert from "./components/ErrorAlert";
 import LoadingSpinner from "./components/LoadingSpinner";
 import ConflictModal from "./components/ConflictModal";
+import dotenv from "dotenv";
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = import.meta.env.VITE_BACKEND;
 let socket = null;
 
 const App = () => {
